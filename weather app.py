@@ -2,7 +2,7 @@ import tkinter as tk
 import requests as rq
 def weather(canvas):
     city=textfield.get()
-    api="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid={api_key}3"
+    api="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid={api_key}"
     json_data=rq.get(api).json()
     if json_data.get('cod') != 200:
                 label1.config(text="City not found!")
